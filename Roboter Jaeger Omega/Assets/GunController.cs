@@ -13,6 +13,9 @@ public class GunController : MonoBehaviour {
     [Tooltip("How long it takes to fire the gun again.")]
     [SerializeField] float TimeBetweenShots;
 
+    [Tooltip("Time to reload the gun.")]
+    [SerializeField] float ReloadTime;
+
     [Tooltip("Maximum ammo within the gun.")]
     [SerializeField] int ClipSize;
 
@@ -41,14 +44,20 @@ public class GunController : MonoBehaviour {
     [SerializeField] Text GunName;
     [SerializeField] string NameOfGun;
 
+    //Other
+    [SerializeField]
+    Animator WeaponAnimator;
+
     // No touchy
     Transform Offset;
-    public int AmmoInGun; // made public for other things to see ammo count
+    public float AmmoInGun; // made public for other things to see ammo count
     float lastTime;
     bool canFire = true;
     bool canReload = true;
 
     ParticleSystem particles;
+
+    [SerializeField] Image AmmoFillBar;
 
     // Use this for initialization
     void Start () {
@@ -67,27 +76,32 @@ public class GunController : MonoBehaviour {
                 Fire();
                 AmmoInGun = AmmoInGun - 1;
                 AmmoCounter.text = AmmoInGun + " / " + ClipSize;
+                AmmoFillBar.fillAmount = (AmmoInGun / ClipSize) ;
+                
                 if (AmmoInGun == 0)
                 {
                     canFire = false;
                     canReload = true;
                 }
+                
                 lastTime = Time.time;
             }
         }
-        if (!Automatic && Input.GetMouseButtonDown(0) && canFire)
+        if (!Automatic && Input.GetMouseButtonDown(0) && canFire && (lastTime + TimeBetweenShots < Time.time))
         {
             Fire();
             AmmoInGun = AmmoInGun - 1;
             AmmoCounter.text = AmmoInGun + " / " + ClipSize;
+            AmmoFillBar.fillAmount = AmmoInGun/ClipSize;
             if (AmmoInGun == 0)
             {
-                Debug.Log("try me");
                 canFire = false;
                 canReload = true;
             }
             lastTime = Time.time;
+            Debug.Log(AmmoInGun/ClipSize);
         }
+
 
         if (Input.GetKeyDown(KeyCode.R) && canReload)
         {
@@ -95,6 +109,7 @@ public class GunController : MonoBehaviour {
             {
                 // play reload sound
                 Debug.Log("Reloading");
+                canReload = false;
                 StartCoroutine(Reload());
             } 
         }
@@ -102,12 +117,19 @@ public class GunController : MonoBehaviour {
 
     void Fire()
     {
+        if (Shotgun)
+        {
+            WeaponAnimator.SetTrigger("PumpShotgun");
+        }
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 10000))
             {
+            SourcePosition.GetComponent<LineRenderer>().enabled = true;
             SourcePosition.GetComponent<LineRenderer>().SetPosition(0, SourcePosition.transform.position);
             SourcePosition.GetComponent<LineRenderer>().SetPosition(1, hit.point);
+            StartCoroutine(RendererDisable());
         }
 
         gameObject.GetComponent<AudioSource>().Play();
@@ -125,19 +147,29 @@ public class GunController : MonoBehaviour {
 
     IEnumerator Reload()
     {
-        gameObject.transform.Rotate(new Vector3(0, 0, 30));
-        yield return new WaitForSeconds(1);
+        if (Shotgun) { WeaponAnimator.SetTrigger("TriggerReloadShotgun"); }
+        yield return new WaitForSeconds(ReloadTime);
         canFire = true;
         canReload = true;
         AmmoInGun = ClipSize;
         AmmoCounter.text = AmmoInGun + " / " + ClipSize;
+        AmmoFillBar.fillAmount = AmmoInGun/ClipSize;
         gameObject.transform.Rotate(new Vector3(0, 0, -30));
         Debug.Log("Reloaded");
     }
 
-    void Equip()
+    public void Equip()
     {
         GunName.text = NameOfGun;
+        AmmoCounter.text = AmmoInGun + " / " + ClipSize;
+        AmmoFillBar.fillAmount = AmmoInGun/ClipSize;
     }
+
+    IEnumerator RendererDisable()
+    {
+        yield return new WaitForSeconds(.03f);
+        SourcePosition.GetComponent<LineRenderer>().enabled = false;
+    }
+
 
 }

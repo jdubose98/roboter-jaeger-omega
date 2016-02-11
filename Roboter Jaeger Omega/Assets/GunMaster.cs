@@ -15,22 +15,23 @@ public class GunMaster : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("Hello");
             Weapon1.SetActive(true);
             Weapon1.GetComponent<GunController>().enabled = true;
+            Weapon1.GetComponent<GunController>().Equip();
 
             Weapon2.SetActive(false);
             Weapon2.GetComponent<GunController>().enabled = false;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Debug.Log("Goodbye");
             Weapon1.SetActive(false);
             Weapon1.GetComponent<GunController>().enabled = false;
 
             Weapon2.SetActive(true);
             Weapon2.GetComponent<GunController>().enabled = true;
+            Weapon2.GetComponent<GunController>().Equip();
         }
     }
 }
