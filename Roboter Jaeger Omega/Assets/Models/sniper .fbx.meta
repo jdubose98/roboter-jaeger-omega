@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 8ca6b3e9286bc1d4ea9371786f80bea4
+timeCreated: 1455289098
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: place3dTexture1
+    100002: place3dTexture2
+    100004: place3dTexture3
+    100006: place3dTexture4
+    100008: //RootNode
+    100010: sniper_for_portfoilio:Box001
+    100012: sniper_for_portfoilio:Box002
+    100014: sniper_for_portfoilio:Box003
+    100016: sniper_for_portfoilio:Box004
+    100018: sniper_for_portfoilio:Box005
+    100020: sniper_for_portfoilio:Box006
+    100022: sniper_for_portfoilio:Box007
+    100024: sniper_for_portfoilio:Box008
+    100026: sniper_for_portfoilio:Box010
+    100028: sniper_for_portfoilio:clip 1
+    100030: 'sniper_for_portfoilio:clip 2 '
+    100032: sniper_for_portfoilio:clip 2!
+    100034: sniper_for_portfoilio:clip 3
+    100036: sniper_for_portfoilio:Cylinder001
+    100038: sniper_for_portfoilio:Cylinder002
+    100040: sniper_for_portfoilio:Cylinder003
+    100042: sniper_for_portfoilio:Cylinder004
+    100044: sniper_for_portfoilio:Cylinder005
+    100046: sniper_for_portfoilio:Cylinder006
+    100048: sniper_for_portfoilio:Cylinder011
+    100050: sniper_for_portfoilio:Cylinder012
+    100052: sniper_for_portfoilio:Cylinder013
+    100054: sniper_for_portfoilio:Cylinder014
+    100056: sniper_for_portfoilio:Cylinder015
+    100058: sniper_for_portfoilio:Cylinder016
+    100060: sniper_for_portfoilio:Cylinder017
+    100062: sniper_for_portfoilio:Cylinder018
+    100064: sniper_for_portfoilio:Cylinder019
+    100066: sniper_for_portfoilio:Cylinder020
+    100068: sniper_for_portfoilio:Cylinder021
+    100070: sniper_for_portfoilio:Cylinder022
+    100072: sniper_for_portfoilio:Cylinder023
+    100074: sniper_for_portfoilio:Cylinder024
+    100076: sniper_for_portfoilio:Cylinder025
+    100078: sniper_for_portfoilio:Cylinder026
+    100080: sniper_for_portfoilio:Cylinder027
+    100082: sniper_for_portfoilio:Cylinder028
+    100084: sniper_for_portfoilio:Cylinder029
+    100086: sniper_for_portfoilio:Cylinder030
+    100088: sniper_for_portfoilio:Cylinder031
+    100090: sniper_for_portfoilio:Cylinder032
+    100092: sniper_for_portfoilio:Cylinder033
+    100094: sniper_for_portfoilio:place3dTexture1
+    100096: sniper_for_portfoilio:place3dTexture2
+    100098: sniper_for_portfoilio:place3dTexture3
+    100100: sniper_for_portfoilio:place3dTexture4
+    100102: sniper_for_portfoilio:place3dTexture5
+    100104: sniper_for_portfoilio:place3dTexture6
+    100106: sniper_for_portfoilio:place3dTexture7
+    100108: sniper_for_portfoilio:place3dTexture8
+    100110: 'sniper_for_portfoilio:scope '
+    100112: sniper_for_portfoilio:scope nobes
+    100114: sniper_for_portfoilio:stand for gun
+    100116: sniper_for_portfoilio:stand for gun 2
+    100118: sniper_for_portfoilio:stand for gun 3
+    100120: sniper_for_portfoilio:top of gun slider
+    100122: sniper_for_portfoilio:transform1
+    100124: sniper_for_portfoilio:transform10
+    100126: sniper_for_portfoilio:transform11
+    100128: sniper_for_portfoilio:transform12
+    100130: sniper_for_portfoilio:transform13
+    100132: sniper_for_portfoilio:transform14
+    100134: sniper_for_portfoilio:transform15
+    100136: sniper_for_portfoilio:transform16
+    100138: sniper_for_portfoilio:transform17
+    100140: sniper_for_portfoilio:transform18
+    100142: sniper_for_portfoilio:transform19
+    100144: sniper_for_portfoilio:transform2
+    100146: sniper_for_portfoilio:transform20
+    100148: sniper_for_portfoilio:transform21
+    100150: sniper_for_portfoilio:transform22
+    100152: sniper_for_portfoilio:transform23
+    100154: sniper_for_portfoilio:transform24
+    100156: sniper_for_portfoilio:transform3
+    100158: sniper_for_portfoilio:transform4
+    100160: sniper_for_portfoilio:transform5
+    100162: sniper_for_portfoilio:transform6
+    100164: sniper_for_portfoilio:transform7
+    100166: sniper_for_portfoilio:transform8
+    100168: sniper_for_portfoilio:transform9
+    100170: sniper_for_portfoilio:trigger
+    100172: sniper_for_portfoilio:Tube001
+    400000: place3dTexture1
+    400002: place3dTexture2
+    400004: place3dTexture3
+    400006: place3dTexture4
+    400008: //RootNode
+    400010: sniper_for_portfoilio:Box001
+    400012: sniper_for_portfoilio:Box002
+    400014: sniper_for_portfoilio:Box003
+    400016: sniper_for_portfoilio:Box004
+    400018: sniper_for_portfoilio:Box005
+    400020: sniper_for_portfoilio:Box006
+    400022: sniper_for_portfoilio:Box007
+    400024: sniper_for_portfoilio:Box008
+    400026: sniper_for_portfoilio:Box010
+    400028: sniper_for_portfoilio:clip 1
+    400030: 'sniper_for_portfoilio:clip 2 '
+    400032: sniper_for_portfoilio:clip 2!
+    400034: sniper_for_portfoilio:clip 3
+    400036: sniper_for_portfoilio:Cylinder001
+    400038: sniper_for_portfoilio:Cylinder002
+    400040: sniper_for_portfoilio:Cylinder003
+    400042: sniper_for_portfoilio:Cylinder004
+    400044: sniper_for_portfoilio:Cylinder005
+    400046: sniper_for_portfoilio:Cylinder006
+    400048: sniper_for_portfoilio:Cylinder011
+    400050: sniper_for_portfoilio:Cylinder012
+    400052: sniper_for_portfoilio:Cylinder013
+    400054: sniper_for_portfoilio:Cylinder014
+    400056: sniper_for_portfoilio:Cylinder015
+    400058: sniper_for_portfoilio:Cylinder016
+    400060: sniper_for_portfoilio:Cylinder017
+    400062: sniper_for_portfoilio:Cylinder018
+    400064: sniper_for_portfoilio:Cylinder019
+    400066: sniper_for_portfoilio:Cylinder020
+    400068: sniper_for_portfoilio:Cylinder021
+    400070: sniper_for_portfoilio:Cylinder022
+    400072: sniper_for_portfoilio:Cylinder023
+    400074: sniper_for_portfoilio:Cylinder024
+    400076: sniper_for_portfoilio:Cylinder025
+    400078: sniper_for_portfoilio:Cylinder026
+    400080: sniper_for_portfoilio:Cylinder027
+    400082: sniper_for_portfoilio:Cylinder028
+    400084: sniper_for_portfoilio:Cylinder029
+    400086: sniper_for_portfoilio:Cylinder030
+    400088: sniper_for_portfoilio:Cylinder031
+    400090: sniper_for_portfoilio:Cylinder032
+    400092: sniper_for_portfoilio:Cylinder033
+    400094: sniper_for_portfoilio:place3dTexture1
+    400096: sniper_for_portfoilio:place3dTexture2
+    400098: sniper_for_portfoilio:place3dTexture3
+    400100: sniper_for_portfoilio:place3dTexture4
+    400102: sniper_for_portfoilio:place3dTexture5
+    400104: sniper_for_portfoilio:place3dTexture6
+    400106: sniper_for_portfoilio:place3dTexture7
+    400108: sniper_for_portfoilio:place3dTexture8
+    400110: 'sniper_for_portfoilio:scope '
+    400112: sniper_for_portfoilio:scope nobes
+    400114: sniper_for_portfoilio:stand for gun
+    400116: sniper_for_portfoilio:stand for gun 2
+    400118: sniper_for_portfoilio:stand for gun 3
+    400120: sniper_for_portfoilio:top of gun slider
+    400122: sniper_for_portfoilio:transform1
+    400124: sniper_for_portfoilio:transform10
+    400126: sniper_for_portfoilio:transform11
+    400128: sniper_for_portfoilio:transform12
+    400130: sniper_for_portfoilio:transform13
+    400132: sniper_for_portfoilio:transform14
+    400134: sniper_for_portfoilio:transform15
+    400136: sniper_for_portfoilio:transform16
+    400138: sniper_for_portfoilio:transform17
+    400140: sniper_for_portfoilio:transform18
+    400142: sniper_for_portfoilio:transform19
+    400144: sniper_for_portfoilio:transform2
+    400146: sniper_for_portfoilio:transform20
+    400148: sniper_for_portfoilio:transform21
+    400150: sniper_for_portfoilio:transform22
+    400152: sniper_for_portfoilio:transform23
+    400154: sniper_for_portfoilio:transform24
+    400156: sniper_for_portfoilio:transform3
+    400158: sniper_for_portfoilio:transform4
+    400160: sniper_for_portfoilio:transform5
+    400162: sniper_for_portfoilio:transform6
+    400164: sniper_for_portfoilio:transform7
+    400166: sniper_for_portfoilio:transform8
+    400168: sniper_for_portfoilio:transform9
+    400170: sniper_for_portfoilio:trigger
+    400172: sniper_for_portfoilio:Tube001
+    2300000: sniper_for_portfoilio:clip 2!
+    2300002: sniper_for_portfoilio:clip 3
+    2300004: sniper_for_portfoilio:Cylinder003
+    2300006: sniper_for_portfoilio:Cylinder006
+    2300008: sniper_for_portfoilio:Cylinder011
+    2300010: sniper_for_portfoilio:Cylinder012
+    2300012: sniper_for_portfoilio:Cylinder013
+    2300014: sniper_for_portfoilio:Cylinder014
+    2300016: sniper_for_portfoilio:Cylinder015
+    2300018: sniper_for_portfoilio:Cylinder016
+    2300020: sniper_for_portfoilio:Cylinder017
+    2300022: sniper_for_portfoilio:Cylinder018
+    2300024: sniper_for_portfoilio:Cylinder019
+    2300026: sniper_for_portfoilio:Cylinder020
+    2300028: sniper_for_portfoilio:Cylinder021
+    2300030: sniper_for_portfoilio:Cylinder022
+    2300032: sniper_for_portfoilio:Cylinder023
+    2300034: sniper_for_portfoilio:Cylinder024
+    2300036: sniper_for_portfoilio:Cylinder025
+    2300038: sniper_for_portfoilio:Cylinder026
+    2300040: sniper_for_portfoilio:Cylinder027
+    2300042: sniper_for_portfoilio:stand for gun
+    2300044: sniper_for_portfoilio:stand for gun 2
+    2300046: sniper_for_portfoilio:stand for gun 3
+    2300048: sniper_for_portfoilio:top of gun slider
+    2300050: sniper_for_portfoilio:trigger
+    3300000: sniper_for_portfoilio:clip 2!
+    3300002: sniper_for_portfoilio:clip 3
+    3300004: sniper_for_portfoilio:Cylinder003
+    3300006: sniper_for_portfoilio:Cylinder006
+    3300008: sniper_for_portfoilio:Cylinder011
+    3300010: sniper_for_portfoilio:Cylinder012
+    3300012: sniper_for_portfoilio:Cylinder013
+    3300014: sniper_for_portfoilio:Cylinder014
+    3300016: sniper_for_portfoilio:Cylinder015
+    3300018: sniper_for_portfoilio:Cylinder016
+    3300020: sniper_for_portfoilio:Cylinder017
+    3300022: sniper_for_portfoilio:Cylinder018
+    3300024: sniper_for_portfoilio:Cylinder019
+    3300026: sniper_for_portfoilio:Cylinder020
+    3300028: sniper_for_portfoilio:Cylinder021
+    3300030: sniper_for_portfoilio:Cylinder022
+    3300032: sniper_for_portfoilio:Cylinder023
+    3300034: sniper_for_portfoilio:Cylinder024
+    3300036: sniper_for_portfoilio:Cylinder025
+    3300038: sniper_for_portfoilio:Cylinder026
+    3300040: sniper_for_portfoilio:Cylinder027
+    3300042: sniper_for_portfoilio:stand for gun
+    3300044: sniper_for_portfoilio:stand for gun 2
+    3300046: sniper_for_portfoilio:stand for gun 3
+    3300048: sniper_for_portfoilio:top of gun slider
+    3300050: sniper_for_portfoilio:trigger
+    4300000: sniper_for_portfoilio:Cylinder011
+    4300002: sniper_for_portfoilio:Cylinder012
+    4300004: sniper_for_portfoilio:Cylinder013
+    4300006: sniper_for_portfoilio:Cylinder014
+    4300008: sniper_for_portfoilio:Cylinder015
+    4300010: sniper_for_portfoilio:Cylinder016
+    4300012: sniper_for_portfoilio:Cylinder017
+    4300014: sniper_for_portfoilio:Cylinder018
+    4300016: sniper_for_portfoilio:Cylinder019
+    4300018: sniper_for_portfoilio:Cylinder020
+    4300020: sniper_for_portfoilio:Cylinder021
+    4300022: sniper_for_portfoilio:Cylinder022
+    4300024: sniper_for_portfoilio:Cylinder023
+    4300026: sniper_for_portfoilio:Cylinder024
+    4300028: sniper_for_portfoilio:Cylinder025
+    4300030: sniper_for_portfoilio:Cylinder026
+    4300032: sniper_for_portfoilio:Cylinder027
+    4300034: sniper_for_portfoilio:stand for gun
+    4300036: sniper_for_portfoilio:trigger
+    4300038: sniper_for_portfoilio:top of gun slider
+    4300040: sniper_for_portfoilio:Cylinder003
+    4300042: sniper_for_portfoilio:stand for gun 2
+    4300044: sniper_for_portfoilio:stand for gun 3
+    4300046: sniper_for_portfoilio:Cylinder006
+    4300048: sniper_for_portfoilio:clip 3
+    4300050: sniper_for_portfoilio:clip 2!
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

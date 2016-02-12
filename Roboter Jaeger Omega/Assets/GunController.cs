@@ -25,6 +25,9 @@ public class GunController : MonoBehaviour {
     [Tooltip("Falloff \"rate\" over distance")]
     [SerializeField] float DamageFalloffRate;
 
+    [Tooltip("Spread of the weapon")]
+    [SerializeField] float GunSpread;
+
     // Modes
     [Tooltip("Is the gun automatic?")]
     [SerializeField] bool Automatic = false;
@@ -47,6 +50,8 @@ public class GunController : MonoBehaviour {
     //Other
     [SerializeField]
     Animator WeaponAnimator;
+
+    [SerializeField] string ReloadTrigger;
 
     // No touchy
     Transform Offset;
@@ -147,7 +152,7 @@ public class GunController : MonoBehaviour {
 
     IEnumerator Reload()
     {
-        if (Shotgun) { WeaponAnimator.SetTrigger("TriggerReloadShotgun"); }
+        WeaponAnimator.SetTrigger(ReloadTrigger);
         yield return new WaitForSeconds(ReloadTime);
         canFire = true;
         canReload = true;
