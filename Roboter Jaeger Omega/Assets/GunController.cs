@@ -104,7 +104,6 @@ public class GunController : MonoBehaviour {
                 canReload = true;
             }
             lastTime = Time.time;
-            Debug.Log(AmmoInGun/ClipSize);
         }
 
 
@@ -136,6 +135,8 @@ public class GunController : MonoBehaviour {
             SourcePosition.GetComponent<LineRenderer>().SetPosition(1, hit.point);
             StartCoroutine(RendererDisable());
         }
+
+        if (hit.transform.gameObject.tag == "Enemy") { Debug.Log("THAT'S A HIT"); }
 
         gameObject.GetComponent<AudioSource>().Play();
 

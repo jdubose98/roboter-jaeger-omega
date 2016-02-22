@@ -14,7 +14,7 @@ public class CrosshairsToPosition : MonoBehaviour {
         {
             gameObject.transform.position = hit.point;
             gameObject.transform.LookAt(aimer);
-            gameObject.transform.Translate(new Vector3(0, 0, 0.05f));
+            gameObject.transform.Translate(new Vector3(0, 0, 2f));
         }
     }
 }
