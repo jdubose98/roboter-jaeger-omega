@@ -109,6 +109,7 @@ public class GunController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.R) && canReload)
         {
+            canFire = false;
             if (AmmoInGun != ClipSize)
             {
                 // play reload sound
