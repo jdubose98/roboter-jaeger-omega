@@ -15,7 +15,8 @@ public class RaycastTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.LookAt(GameObject.Find("Player").GetComponent<Transform>());
+        gameObject.transform.LookAt(GameObject.Find("Player 1").GetComponent<Transform>());
+        gameObject.transform.Rotate(0, 180, 0);
 
         var up = transform.TransformDirection(Vector3.up);
         //note the use of var as the type. This is because in c# you 
