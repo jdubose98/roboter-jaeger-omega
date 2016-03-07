@@ -158,7 +158,9 @@ public class GunController : MonoBehaviour {
             StartCoroutine(RendererDisable());
         }
 
-        if (hit.transform.gameObject.tag == "Enemy") { Debug.Log("THAT'S A HIT"); }
+        if (hit.transform.gameObject.tag == "Enemy") {
+            hit.transform.GetComponent<EnemyHealth>().TakeDamage(MaxDamage);
+        }
 
         gameObject.GetComponent<AudioSource>().Play();
 

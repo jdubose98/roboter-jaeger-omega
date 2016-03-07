@@ -6,6 +6,9 @@ public class RaycastTest : MonoBehaviour
     [SerializeField]
     float range;
 
+    [SerializeField]
+    public GameObject Target;
+
     // Use this for initialization
     void Start()
     {
@@ -15,7 +18,12 @@ public class RaycastTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.LookAt(GameObject.Find("Player 1").GetComponent<Transform>());
+
+        Vector3 targetPosition = new Vector3(   Target.transform.position.x,
+                                                transform.position.y,
+                                                Target.transform.position.z);
+
+        gameObject.transform.LookAt(targetPosition);
         gameObject.transform.Rotate(0, 180, 0);
 
         var up = transform.TransformDirection(Vector3.up);
