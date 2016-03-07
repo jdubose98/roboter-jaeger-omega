@@ -19,7 +19,7 @@ public class SecurityCameraScript : MonoBehaviour {
 
         if (target.gameObject.GetComponent<Renderer>().IsVisibleFrom(cam))
         {
-            Debug.Log("Sighted " + Time.time);
+            //Debug.Log("Sighted " + Time.time);
         }
     }
 
