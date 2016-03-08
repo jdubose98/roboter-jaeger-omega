@@ -8,10 +8,27 @@ public class LinkedActionScript : MonoBehaviour {
     public string ObjectName;
     [SerializeField] Animator ObjectAnimator;
     [SerializeField] string TriggerToSet;
+    [SerializeField] GameObject ActivityLight;
+
+    [SerializeField] Material InactiveTexture;
+    [SerializeField] Material ActiveTexture;
+
+    bool IsActive = false;
 
     public void OnInteract()
     {
-        Debug.Log("WE DID A THING");
+        gameObject.GetComponent<AudioSource>().Play();
         ObjectAnimator.SetTrigger(TriggerToSet);
+
+        if (IsActive)
+        {
+            IsActive = false;
+            ActivityLight.GetComponent<Renderer>().material = InactiveTexture;
+        }
+        else
+        {
+            IsActive = true;
+            ActivityLight.GetComponent<Renderer>().material = ActiveTexture;
+        }
     }
 }

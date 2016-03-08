@@ -55,6 +55,7 @@ public class GunController : MonoBehaviour {
     Animator WeaponAnimator;
 
     [SerializeField] string ReloadTrigger;
+    [SerializeField] GameObject FPController;
 
     // No touchy
     Transform Offset;
@@ -129,11 +130,13 @@ public class GunController : MonoBehaviour {
             {
                 // aim the gun.
                 Debug.Log("Aiming");
+
                 WeaponAnimator.SetTrigger("ZoomSniper");
                 gunAimed = true;
             }
             else {
                 WeaponAnimator.SetTrigger("UnzoomSniper");
+
                 gunAimed = false;
             }
         

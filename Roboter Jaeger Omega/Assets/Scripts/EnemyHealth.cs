@@ -11,6 +11,8 @@ public class EnemyHealth : MonoBehaviour {
 
     bool dead = false;
 
+    [SerializeField] AudioSource DieSource;
+
 	// Use this for initialization
 	void Start () {
         CurrentHealth = MaxHealth;
@@ -18,7 +20,7 @@ public class EnemyHealth : MonoBehaviour {
 	
 
     public void TakeDamage(float damage) {
-        if ((CurrentHealth - damage) <= 0 && !dead) { Die(); }
+        if ((CurrentHealth - damage) <= 0 && !dead) { if (gameObject.name != "Security Camera") Die(); else CamDie(); }
         else CurrentHealth = CurrentHealth - damage;
     }
 
@@ -29,6 +31,14 @@ public class EnemyHealth : MonoBehaviour {
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
         StartCoroutine(Rotator(.01f, 1f));
         gameObject.GetComponent<AudioSource>().Play();
+        Destroy(gameObject, 5);
+    }
+
+    void CamDie()
+    {
+        gameObject.GetComponentInChildren<SecurityCameraScript>().enabled = false;
+        gameObject.GetComponent<AudioSource>().Stop();
+        DieSource.Play();
         Destroy(gameObject, 5);
     }
 
