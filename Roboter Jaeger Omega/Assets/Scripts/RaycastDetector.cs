@@ -7,11 +7,10 @@ public class RaycastDetector : MonoBehaviour
 
     [SerializeField] Camera m_camera;
     [SerializeField] Text m_InteractText;
-    //[SerializeField] GameObject NumberPadPanel;
 
     public int RandomCode;
 
-    private bool RayStuff;
+    public bool RayStuff;
 
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstperson;
 
@@ -35,37 +34,6 @@ public class RaycastDetector : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            // NUMPAD
-            if (hit.collider.tag.Equals("NumberPad"))
-            {   
-                Debug.Log("This is a numberpad!");
-
-                if (RayStuff == true)
-                {
-                    //NumberPadPanel.SetActive(true);
-                    firstperson.enabled = false;
-                    Cursor.visible = true;
-                    Cursor.lockState = CursorLockMode.None;
-                }
-
-                if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                   // NumberPadPanel.SetActive(false);
-                    firstperson.enabled = true;
-                    Cursor.visible = false;
-                    Cursor.lockState = CursorLockMode.Locked;
-
-                    RayStuff = false;
-
-                    StartCoroutine("NumpadIssues");   
-                }
-
-            }
-            else
-            {
-               // NumberPadPanel.SetActive(false);
-                firstperson.enabled = true;
-            }
 
             if (hit.collider.tag.Equals("InteractiveObject"))
             {
@@ -84,12 +52,4 @@ public class RaycastDetector : MonoBehaviour
             }
         }
 	}
-    IEnumerator NumpadIssues()
-    {
-        yield return new WaitForSeconds(2f);
-
-        RayStuff = true;
-
-        Debug.Log("You may get back on the number pad");
-    }
 }
