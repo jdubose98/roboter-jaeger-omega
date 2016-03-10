@@ -35,8 +35,8 @@ public class GunController : MonoBehaviour {
     [Tooltip("Does this gun shoot multiple projectiles at once?")]
     [SerializeField] bool Shotgun = false;
 
-    [Tooltip("Does this weapon shoot exploding rounds?")]
-    [SerializeField] bool Explosive = false;
+    //[Tooltip("Does this weapon shoot exploding rounds?")]
+    //[SerializeField] bool Explosive = false;
 
     [Tooltip("Can this gun aim down the sights?")]
     [SerializeField] bool CanAimGun = false;

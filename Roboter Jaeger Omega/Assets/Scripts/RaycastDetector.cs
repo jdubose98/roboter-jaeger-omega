@@ -44,12 +44,27 @@ public class RaycastDetector : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hit.collider.gameObject.GetComponent<LinkedActionScript>().OnInteract();
+                    if (hit.collider.gameObject.GetComponent<LinkedActionScript>().LockPlayer)
+                    {
+                        m_camera.GetComponent<UnityStandardAssets.ImageEffects.DepthOfField>().enabled = true;
+                        firstperson.enabled = false;
+                        Cursor.lockState = CursorLockMode.None;
+                        Cursor.visible = true;
+                    }
                 }
             }
             else
             {
                 m_InteractText.gameObject.SetActive(false);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            m_camera.GetComponent<UnityStandardAssets.ImageEffects.DepthOfField>().enabled = false;
+            firstperson.enabled = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            GameObject.Find("FakePad").SetActive(false);
         }
 	}
 }
