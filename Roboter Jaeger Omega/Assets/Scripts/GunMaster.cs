@@ -5,6 +5,8 @@ public class GunMaster : MonoBehaviour {
 
     [SerializeField] GameObject Weapon1;
     [SerializeField] GameObject Weapon2;
+    [SerializeField]
+    GameObject MeleeWeapon;
 
     // Use this for initialization
     void Start()
@@ -20,11 +22,13 @@ public class GunMaster : MonoBehaviour {
             Weapon1.SetActive(true);
             Weapon1.GetComponent<GunController>().enabled = true;
             Weapon1.GetComponent<GunController>().Equip();
-            Debug.Log("KEY1 GO INVISIBLE NOW");
 
             Weapon2.SetActive(false);
             Weapon2.GetComponent<GunController>().enabled = false;
-            Debug.Log("KEY1 NEW WEAPON APPEARED");
+
+            MeleeWeapon.SetActive(false);
+            MeleeWeapon.GetComponent<MeleeController>().enabled = false;
+
             
         }
 
@@ -32,12 +36,28 @@ public class GunMaster : MonoBehaviour {
         {
             Weapon1.SetActive(false);
             Weapon1.GetComponent<GunController>().enabled = false;
-            Debug.Log("KEY2 GO INVISIBLE NOW");
 
             Weapon2.SetActive(true);
             Weapon2.GetComponent<GunController>().enabled = true;
             Weapon2.GetComponent<GunController>().Equip();
-            Debug.Log("KEY2 NEW WEAPON APPEARED");
+
+            MeleeWeapon.SetActive(false);
+            MeleeWeapon.GetComponent<MeleeController>().enabled = false;
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Weapon1.SetActive(false);
+            Weapon1.GetComponent<GunController>().enabled = false;
+
+            Weapon2.SetActive(false);
+            Weapon2.GetComponent<GunController>().enabled = false;
+
+            MeleeWeapon.SetActive(true);
+            MeleeWeapon.GetComponent<MeleeController>().enabled = true;
+            MeleeWeapon.GetComponent<MeleeController>().Equip();
+
         }
     }
 }

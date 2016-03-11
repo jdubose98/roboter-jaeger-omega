@@ -12,6 +12,8 @@ public class RaycastDetector : MonoBehaviour
 
     public bool RayStuff;
 
+    public bool Locked;
+
     public UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstperson;
 
     void Start ()
@@ -64,7 +66,7 @@ public class RaycastDetector : MonoBehaviour
             firstperson.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            GameObject.Find("FakePad").SetActive(false);
+            if (Locked) GameObject.Find("FakePad").SetActive(false);
         }
 	}
 }

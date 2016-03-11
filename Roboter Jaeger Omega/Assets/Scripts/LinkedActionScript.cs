@@ -56,7 +56,7 @@ public class LinkedActionScript : MonoBehaviour {
 
     public void ToggleLight(bool toggle)
     {
-        if (toggle) ActivityLight.GetComponent<Renderer>().material = ActiveTexture;
-        else ActivityLight.GetComponent<Renderer>().material = InactiveTexture;
+        if (toggle) ActivityLight.GetComponent<Renderer>().material = InactiveTexture;
+        else ActivityLight.GetComponent<Renderer>().material = ActiveTexture;
     }
 }
