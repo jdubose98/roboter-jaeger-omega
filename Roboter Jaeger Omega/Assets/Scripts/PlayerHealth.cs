@@ -4,7 +4,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-    [SerializeField] float Health;
+    public float Health;
     [SerializeField] float BleedOutTime;
 
     [SerializeField] Text HealthCounter;
@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour {
 
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         HealthCounter.text = "" + PlayerCurrentHealth;
         HealthFillBar.fillAmount = (PlayerCurrentHealth / Health);

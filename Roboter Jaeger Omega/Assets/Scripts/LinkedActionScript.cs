@@ -8,24 +8,24 @@ public class LinkedActionScript : MonoBehaviour {
     [Tooltip("Can the object be interacted with?")]
     public bool IsInteractive = true;
     [Tooltip("Does this object\"signal\" a script? (Attach a script (InteractionScript) in order to handle this)")]
-    [SerializeField] bool UseScriptSignaling;
+    [SerializeField] bool m_UseScriptSignaling;
     [Tooltip("The GameObject that is targeted - good for UseScriptSignaling")]
-    [SerializeField] GameObject targetObject;
+    [SerializeField] GameObject m_targetObject;
 
 
     [Tooltip("Is this object animated?")]
-    [SerializeField] bool Animated = true;
+    [SerializeField] bool m_Animated = true;
     [Tooltip("What animator controls this object?")]
-    [SerializeField] Animator ObjectAnimator;
+    [SerializeField] Animator m_ObjectAnimator;
     [Tooltip("What trigger should be set when animating?")]
-    [SerializeField] string TriggerToSet;
+    [SerializeField] string m_TriggerToSet;
 
     [Tooltip("Reference to the activity light for visual feedback to a player.")]
-    [SerializeField] GameObject ActivityLight;
+    [SerializeField] GameObject m_ActivityLight;
     [Tooltip("Texture used when the system is \"off.\"")]
-    [SerializeField] Material InactiveTexture;
+    [SerializeField] Material m_InactiveTexture;
     [Tooltip("Texture used when the system is \"on.\"")]
-    [SerializeField] Material ActiveTexture;
+    [SerializeField] Material m_ActiveTexture;
 
     [SerializeField] bool IsToggled;
     public bool LockPlayer = false;
@@ -35,7 +35,7 @@ public class LinkedActionScript : MonoBehaviour {
     public void OnInteract()
     {
         gameObject.GetComponent<AudioSource>().Play();
-        if (Animated) ObjectAnimator.SetTrigger(TriggerToSet);
+        if (m_Animated) m_ObjectAnimator.SetTrigger(m_TriggerToSet);
 
         if (IsActive)
         {
@@ -43,20 +43,20 @@ public class LinkedActionScript : MonoBehaviour {
             if (IsToggled) ToggleLight(false);
 
 
-            if (UseScriptSignaling) targetObject.GetComponent<InteractionScript>().TurnOff();
+            if (m_UseScriptSignaling) m_targetObject.GetComponent<InteractionScript>().TurnOff();
         }
         else
         {
             IsActive = true;
             if (IsToggled) ToggleLight(true);
-            if (targetObject.activeSelf == false) targetObject.SetActive(true);
-            if (UseScriptSignaling) targetObject.GetComponent<InteractionScript>().TurnOn();
+            if (m_targetObject.activeSelf == false) m_targetObject.SetActive(true);
+            if (m_UseScriptSignaling) m_targetObject.GetComponent<InteractionScript>().TurnOn();
         }
     }
 
     public void ToggleLight(bool toggle)
     {
-        if (toggle) ActivityLight.GetComponent<Renderer>().material = InactiveTexture;
-        else ActivityLight.GetComponent<Renderer>().material = ActiveTexture;
+        if (toggle) m_ActivityLight.GetComponent<Renderer>().material = m_ActiveTexture;
+        else m_ActivityLight.GetComponent<Renderer>().material = m_InactiveTexture;
     }
 }
