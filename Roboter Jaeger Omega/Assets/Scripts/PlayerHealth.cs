@@ -10,6 +10,9 @@ public class PlayerHealth : MonoBehaviour {
     [SerializeField] Text HealthCounter;
     [SerializeField] Image HealthFillBar;
 
+    [SerializeField]
+    PlayerDeathScript KillScript;
+
     public int PlayerCurrentHealth;
 
 	void Start () {
@@ -21,6 +24,10 @@ public class PlayerHealth : MonoBehaviour {
     public void PlayerTakeDamage(int damage)
     {
         PlayerCurrentHealth = PlayerCurrentHealth - damage;
+        if (PlayerCurrentHealth < 0)
+        {
+            KillScript.Die();
+        }
         UpdateUI();
     }
 
@@ -34,4 +41,5 @@ public class PlayerHealth : MonoBehaviour {
         HealthCounter.text = "" + PlayerCurrentHealth;
         HealthFillBar.fillAmount = (PlayerCurrentHealth / Health);
     }
+
 }

@@ -26,9 +26,9 @@ public class EnemyHealth : MonoBehaviour {
 
     void Die()
     {
-        gameObject.GetComponent<RaycastTest>().enabled = false;
-        gameObject.GetComponent<movement>().enabled = false;
+        gameObject.GetComponent<EnemyAttack>().enabled = false;
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        gameObject.GetComponentInChildren<NavTrigger>().enabled = false;
         StartCoroutine(Rotator(.01f, 1f));
         gameObject.GetComponent<AudioSource>().Play();
         Destroy(gameObject, 5);

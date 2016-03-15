@@ -15,8 +15,6 @@ public class Spawner : MonoBehaviour {
     {
         GameObject clone = Instantiate(EnemyPrefab);
         clone.transform.position = gameObject.transform.position;
-        clone.GetComponent<RaycastTest>().Target = TargetEnemy.gameObject;
-        clone.GetComponent<movement>().target = TargetEnemy;
         Debug.Log("Spawned enemy");
     }
 

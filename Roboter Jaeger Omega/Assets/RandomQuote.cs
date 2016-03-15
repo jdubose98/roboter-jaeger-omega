@@ -12,4 +12,13 @@ public class RandomQuote : MonoBehaviour {
         int n = Random.Range(1, m_RandomQuotes.Length);
         m_Text.text = m_RandomQuotes[n];
     }
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            RandomizeText();
+        }
+    }
 }

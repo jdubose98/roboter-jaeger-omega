@@ -5,7 +5,7 @@ public class EnemyAttack : MonoBehaviour {
 
     bool debounce = false;
 
-	void OnTriggerEnter(Collider hit)
+	void OnCollisionEnter(Collision hit)
     {
         if (hit.gameObject.tag == "Player" && debounce == false)
         {
