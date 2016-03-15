@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour {
 
+    [SerializeField] int damage;
+
     bool debounce = false;
 
 	void OnCollisionEnter(Collision hit)
@@ -11,7 +13,7 @@ public class EnemyAttack : MonoBehaviour {
         {
             Debug.Log("Found");
             StartCoroutine(DebounceRoutine());
-            hit.gameObject.GetComponent<PlayerHealth>().PlayerTakeDamage(5);
+            hit.gameObject.GetComponent<PlayerHealth>().PlayerTakeDamage(damage);
         }
     }
 

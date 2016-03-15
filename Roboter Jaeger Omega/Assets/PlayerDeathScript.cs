@@ -8,6 +8,8 @@ public class PlayerDeathScript : MonoBehaviour {
 
     [SerializeField] Animator DeathScreenAnim;
 
+    [SerializeField] RandomQuote quoter;
+
     public void Die()
     {
         gameObject.GetComponentInChildren<FirstPersonController>().enabled = false;
@@ -17,6 +19,8 @@ public class PlayerDeathScript : MonoBehaviour {
         gameObject.GetComponentInChildren<ArmsObjectLookAtHack>().enabled = false;
         gameObject.transform.Rotate(0, 0, 55);
         DeathScreenAnim.SetTrigger("DEAD");
-        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        quoter.RandomizeText();
     }
 }

@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour {
 
     public int PlayerCurrentHealth;
 
+    public bool NotDead = true;
+
 	void Start () {
         PlayerCurrentHealth = (int)Health;
         UpdateUI();
@@ -23,12 +25,15 @@ public class PlayerHealth : MonoBehaviour {
 
     public void PlayerTakeDamage(int damage)
     {
+        if (NotDead) { 
         PlayerCurrentHealth = PlayerCurrentHealth - damage;
-        if (PlayerCurrentHealth < 0)
-        {
-            KillScript.Die();
-        }
+        if (PlayerCurrentHealth <= 0 && NotDead)
+            {
+                NotDead = false;
+                KillScript.Die();
+            }
         UpdateUI();
+        }
     }
 
     void GoDown() // The player is "knocked down"
