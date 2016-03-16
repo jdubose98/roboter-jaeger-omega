@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GunMaster : MonoBehaviour {
 
+    [SerializeField] GameObject[] m_Weapons;
+
     [SerializeField] GameObject Weapon1;
     [SerializeField] GameObject Weapon2;
     [SerializeField]
@@ -11,6 +13,11 @@ public class GunMaster : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        var WeaponRandom = Random.Range(0, m_Weapons.Length);
+        Weapon1 = m_Weapons[WeaponRandom];
+        WeaponRandom = Random.Range(0, m_Weapons.Length);
+        Weapon2 = m_Weapons[WeaponRandom];
+
         if (Weapon1.activeSelf == false) {
         Weapon1.SetActive(true); }
 	}

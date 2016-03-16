@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.Audio;
 
 public class PlayerDeathScript : MonoBehaviour {
 
@@ -10,8 +11,14 @@ public class PlayerDeathScript : MonoBehaviour {
 
     [SerializeField] RandomQuote quoter;
 
+    [SerializeField] AudioMixerSnapshot m_DeathSnapshot;
+
+    [SerializeField] AudioSource DeathMusic;
+
     public void Die()
     {
+        m_DeathSnapshot.TransitionTo(1);
+        DeathMusic.Play();
         gameObject.GetComponentInChildren<FirstPersonController>().enabled = false;
         gameObject.GetComponentInChildren<GunMaster>().enabled = false;
         gameObject.GetComponentInChildren<RaycastDetector>().enabled = false;

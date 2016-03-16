@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: ab7f0dfe6a60c5b4d96ac0629a8de542
+timeCreated: 1458135358
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box003
+    100004: Box016
+    100006: Window 003
+    100008: Window 004
+    100010: Window 005
+    100012: Window 006
+    100014: Window 007
+    100016: Window 008
+    100018: Window 009
+    100020: Window 010
+    100022: Window 011
+    100024: Window 012
+    100026: Window 013
+    100028: Window 014
+    100030: Window 015
+    100032: Window 016
+    100034: Window 017
+    100036: Window 018
+    100038: Window 019
+    100040: Window 020
+    100042: Window 021
+    100044: Window 022
+    100046: Window 023
+    100048: Window 024
+    100050: Window 025
+    100052: Window 026
+    100054: Window 027
+    100056: Window 028
+    100058: Window 029
+    100060: Window 030
+    100062: Window 031
+    100064: Window 032
+    100066: Window 2
+    400000: //RootNode
+    400002: Box003
+    400004: Box016
+    400006: Window 003
+    400008: Window 004
+    400010: Window 005
+    400012: Window 006
+    400014: Window 007
+    400016: Window 008
+    400018: Window 009
+    400020: Window 010
+    400022: Window 011
+    400024: Window 012
+    400026: Window 013
+    400028: Window 014
+    400030: Window 015
+    400032: Window 016
+    400034: Window 017
+    400036: Window 018
+    400038: Window 019
+    400040: Window 020
+    400042: Window 021
+    400044: Window 022
+    400046: Window 023
+    400048: Window 024
+    400050: Window 025
+    400052: Window 026
+    400054: Window 027
+    400056: Window 028
+    400058: Window 029
+    400060: Window 030
+    400062: Window 031
+    400064: Window 032
+    400066: Window 2
+    2300000: Box003
+    2300002: Box016
+    2300004: Window 003
+    2300006: Window 004
+    2300008: Window 005
+    2300010: Window 006
+    2300012: Window 007
+    2300014: Window 008
+    2300016: Window 009
+    2300018: Window 010
+    2300020: Window 011
+    2300022: Window 012
+    2300024: Window 013
+    2300026: Window 014
+    2300028: Window 015
+    2300030: Window 016
+    2300032: Window 017
+    2300034: Window 018
+    2300036: Window 019
+    2300038: Window 020
+    2300040: Window 021
+    2300042: Window 022
+    2300044: Window 023
+    2300046: Window 024
+    2300048: Window 025
+    2300050: Window 026
+    2300052: Window 027
+    2300054: Window 028
+    2300056: Window 029
+    2300058: Window 030
+    2300060: Window 031
+    2300062: Window 032
+    2300064: Window 2
+    3300000: Box003
+    3300002: Box016
+    3300004: Window 003
+    3300006: Window 004
+    3300008: Window 005
+    3300010: Window 006
+    3300012: Window 007
+    3300014: Window 008
+    3300016: Window 009
+    3300018: Window 010
+    3300020: Window 011
+    3300022: Window 012
+    3300024: Window 013
+    3300026: Window 014
+    3300028: Window 015
+    3300030: Window 016
+    3300032: Window 017
+    3300034: Window 018
+    3300036: Window 019
+    3300038: Window 020
+    3300040: Window 021
+    3300042: Window 022
+    3300044: Window 023
+    3300046: Window 024
+    3300048: Window 025
+    3300050: Window 026
+    3300052: Window 027
+    3300054: Window 028
+    3300056: Window 029
+    3300058: Window 030
+    3300060: Window 031
+    3300062: Window 032
+    3300064: Window 2
+    4300000: Box003
+    4300002: Box016
+    4300004: Window 2
+    4300006: Window 003
+    4300008: Window 004
+    4300010: Window 005
+    4300012: Window 006
+    4300014: Window 007
+    4300016: Window 008
+    4300018: Window 009
+    4300020: Window 010
+    4300022: Window 011
+    4300024: Window 012
+    4300026: Window 013
+    4300028: Window 014
+    4300030: Window 015
+    4300032: Window 016
+    4300034: Window 017
+    4300036: Window 018
+    4300038: Window 019
+    4300040: Window 020
+    4300042: Window 021
+    4300044: Window 022
+    4300046: Window 023
+    4300048: Window 024
+    4300050: Window 025
+    4300052: Window 026
+    4300054: Window 027
+    4300056: Window 028
+    4300058: Window 029
+    4300060: Window 030
+    4300062: Window 031
+    4300064: Window 032
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

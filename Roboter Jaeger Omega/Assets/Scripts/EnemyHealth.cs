@@ -26,9 +26,12 @@ public class EnemyHealth : MonoBehaviour {
 
     void Die()
     {
+        dead = true;
+        gameObject.GetComponent<SpawnedEnemyTallyScript>().ResetTally();
         gameObject.GetComponent<EnemyAttack>().enabled = false;
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
         gameObject.GetComponentInChildren<NavTrigger>().enabled = false;
+        gameObject.GetComponentInChildren<CapsuleCollider>().enabled = false;
         StartCoroutine(Rotator(.01f, 1f));
         gameObject.GetComponent<AudioSource>().Play();
         Destroy(gameObject, 5);
@@ -36,6 +39,7 @@ public class EnemyHealth : MonoBehaviour {
 
     void CamDie()
     {
+        dead = true;
         gameObject.GetComponentInChildren<SecurityCameraScript>().enabled = false;
         gameObject.GetComponent<AudioSource>().Stop();
         DieSource.Play();
